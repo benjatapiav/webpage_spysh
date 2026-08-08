@@ -6,7 +6,7 @@ nav{
     transition: background-color  .3s ease, color .3s ease;
 }
 nav:hover{
-    background-color: rgba(0, 0, 0, 0.721);
+    background-color: rgba(0, 0, 0, 0.808);
 }
 
 /* Logotipo de navbar*/

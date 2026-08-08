@@ -11,8 +11,9 @@ section{
 /*=================*/
 
 .vista-principal{
-    background-image: url(../assets/imagenes/body/section_1/fondo_vista_principal_y_sello_spysh.png);
+    background-image: url(../assets/imagenes/body/section_1/fondo_vista_principal_spysh_3.png);
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -22,8 +23,7 @@ section{
 
 
 .quienes-somos{
-    background-image: url(../assets/imagenes/body/section_2/fondo_vista_principal_invertida.png);
-    background-position: center;
+    background-image: url(../assets/imagenes/body/section_1/fondo_vista_principal_2.png);
     background-repeat: no-repeat;
     background-size: cover;
     position:relative;

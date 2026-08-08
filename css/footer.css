@@ -1,0 +1,60 @@
+.container-footer{
+    height: 70vh;
+    background-image: url(../assets/imagenes/footer/fondo_footer_1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.caja-footer{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+}
+.footer{
+    width: 33%;
+}
+.footerCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    bottom: 30%;
+    
+}
+.logoPrincipalSpysh{
+    width: 80%;
+}
+.logos-footer{
+    display: flex;
+    flex-direction: row;
+}
+.logos-footer a{
+    width: 50%;
+}
+.logos-footer img{
+    width: 40%;
+    transform: scale(1);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.425);
+    border-radius: 50%;
+    transition: transform .3s ease;
+}
+.logos-footer img:hover{
+    transform: scale(1.2);
+    
+}
+.caja-under-footer{
+    position:absolute;
+    color: var(--color-secondary);
+    bottom: 2px;
+    padding: 0;
+    margin: 0;
+    font-size: smaller;
+    text-align: center;
+    height: 25%;
+}
