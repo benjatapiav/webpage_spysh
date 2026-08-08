@@ -1,0 +1,240 @@
+/*=================*/
+/* Section*/
+/*=================*/
+
+section{
+    height: 100vh;
+}
+
+/*=================*/
+/* Section_1*/
+/*=================*/
+
+.vista-principal{
+    background-image: url(../assets/imagenes/body/section_1/fondo_vista_principal_y_sello_spysh.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*=================*/
+/*=== Section_2 ===*/
+/*=================*/
+
+
+.quienes-somos{
+    background-image: url(../assets/imagenes/body/section_2/fondo_vista_principal_invertida.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+.capa{
+    position:absolute;
+    inset:0;
+
+    transition:
+        opacity .5s ease,
+        transform .5s ease,
+        filter .5s ease;
+    opacity:1;
+    visibility: visible;
+}
+.fondo{
+    z-index:1;
+    display:flex;
+    justify-content: space-between;
+}
+.editorial{
+    z-index:2;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.editorial.oculta{
+    opacity:0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-30px);
+    filter: blur(6px);
+}
+.fundadoras{
+    z-index:3;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity:0;
+    visibility:hidden;
+    pointer-events: none;
+
+    transform: translateY(30px);
+    filter: blur(6px);
+}
+
+
+/*=================*/
+
+.fundadoras.activa{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+
+    transform:translateY(0);
+    filter:blur(0);
+}
+.fondo-left{
+    background-image: url(../assets/imagenes/body/section_2/subfondo_2_panel_frontal.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-attachment: fixed;
+    width: 35%;
+}
+.fondo-right{
+    background-image: url(../assets/imagenes/body/section_2/subfondo_3_panel_frontal.png);
+    background-position: right -180px;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-attachment: fixed;
+    width: 35%;
+
+}
+
+.texto-editorial{
+    width: 50%;
+    height: 50%;
+    padding: 2%;
+    border-radius: 10px;
+    color: var(--color-secondary);
+    background-color: rgba(0, 0, 0, 0.568);
+    box-shadow: 2px 2px 50px rgba(167, 167, 167, 0.349);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    align-content: center;
+    text-shadow: 2px 2px 5px black;
+}
+/*=================*/
+
+.button-fundadoras{
+    padding: 2%;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.151);
+    color: var(--color-secundary);
+    transition: all .3s ease;
+}
+.button-fundadoras:hover{
+    box-shadow: 1px 1px 70px -10px var(--color-primary);
+    cursor: pointer;
+}
+
+/* =========================== */
+.container-card{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5%;
+    
+}
+.card.maricristy,.card.gladys{
+    height: 75%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5%;
+    border-radius: 5px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.705);
+    
+}
+.card.maricristy .maricristy-front, .card.gladys .gladys-front{
+    height: 100%;
+    position: relative;
+}
+/* Imagen de Cards*/
+.maricristy-front img, .gladys-front img{
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    
+}
+/* Titulo de Cards*/
+.maricristy-front h1, .gladys-front h1{
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.438);
+    color: black;
+    font-size: larger;
+    margin: 0;
+    display: inline-block;
+    border-bottom: 2px solid #e12587;
+    padding-bottom: 5px;
+}
+
+/* div front cards*/
+
+/* div back cards*/
+.maricristy-back, .gladys-back{
+    position: absolute;
+    z-index: 5;
+    height: 75%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-primary);
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+.maricristy-back:hover, .gladys-back:hover{
+    opacity: 1;
+}
+.maricristy-back p, .gladys-back p{
+    color: white;
+    padding: 5%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.438);
+}
+.button-volver{
+    width: 6%;
+    height: 5%;
+    padding: 0;
+    margin: 0;
+    border-radius: 60px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.button-volver img{
+    width: 100%;
+    transition: transform .3s ease, width .3s ease;
+}
+.button-volver img:hover{
+    width: 110%;
+    transform: rotate(360deg);
+}
+
+
+/*=================*/
+/* Section_3*/
+/*=================*/
+
+
+/*=================*/
+/* Section_4*/
+/*=================*/
+
+
+/*=================*/
+/* Section_5*/
+/*=================*/

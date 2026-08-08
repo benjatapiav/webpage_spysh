@@ -1,0 +1,35 @@
+/* Tipografías */
+
+@font-face {
+  font-family: "GlacialIndifference";
+  src: url("../../assets/fuente_tipografica/GlacialIndifference-Regular.otf")
+    format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "KozGoPr6NRegular";
+  src: url("../../assets/fuente_tipografica/KozGoPr6NRegular.otf")
+    format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+:root{
+
+    /* Colores */
+    
+    --color-primary:#e12587;
+    --color-primary-gradient:#e12586ec;
+    --color-secondary:#ebd1dc;
+    --color-secondary-gradient:#ebd1dc96;
+    --color-black-gradient:#00000058;
+    --color-black:#000000;
+    --color-white:#ffffff;
+    
+    /* Tipografías */
+
+    --font-principal:"GlacialIndifference";
+    --font-secondary:"KozGoPr6NRegular";
+
+}
