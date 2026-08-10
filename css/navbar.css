@@ -1,37 +1,49 @@
 nav{
     width: 100%;
+    height: 10%;
     display: flex;
     position: fixed;
-    z-index: 10;
-    transition: background-color  .3s ease, color .3s ease;
+    z-index: 100;
+    transition: 
+        background-color  .5s ease,
+        color .5s ease,
+        opacity .5s ease;
+    
 }
 nav:hover{
-    background-color: rgba(0, 0, 0, 0.808);
+    background-color: rgba(0, 0, 0, 0.856);
 }
+nav:hover .nav-container-links{
+    opacity: 1;
+}
+
 
 /* Logotipo de navbar*/
 
 .nav-container-logo{
-    width: 30%;
-    max-height: 10vh;
-    padding-left: 1%;
+    max-width: 30%;
     display: flex;
-    align-items: center;
-    
-    
+    flex-direction: column;
+    justify-content: end;
+    padding-left: 1%;
 }
-.nav-container-logo img{
-    height: 70%;
+.nav-container-logo .container-logo img{
+    width: 10%;
+    transform: scale(1);
+    transition: transform .3s ease;
+}
+.nav-container-logo .container-logo img:hover{
+    transform: scale(1.2);
 }
 /* Links de navbar */
 
 .nav-container-links{
+    opacity: 0;
     width: 70%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     align-items: center;
     text-align: center;
-    
 }
 
 .nav-container-links a{
@@ -43,7 +55,7 @@ nav:hover{
     transition:
         color .3s ease, 
         font-size .3s ease,
-        background-color .3s ease,
+        background-color .4s ease,
         box-shadow .5s ease;
     
 

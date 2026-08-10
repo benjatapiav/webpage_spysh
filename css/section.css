@@ -11,11 +11,23 @@ section{
 /*=================*/
 
 .vista-principal{
-    background-image: url(../assets/imagenes/body/section_1/fondo_vista_principal_spysh_3.png);
+    background-image: url(../assets/imagenes/body/section_1/fondo_spysh_santiago_3.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
 }
+.imagenVistaPrincipal{
+    width: 50%;
+    height: 60%;
+    display: flex;
+}
+.imagenVistaPrincipal img{
+    width: 100%;
+}
+
+
 
 /*=================*/
 /*=== Section_2 ===*/
@@ -108,30 +120,44 @@ section{
 .texto-editorial{
     width: 50%;
     height: 50%;
-    padding: 2%;
+    padding: 5%;
     border-radius: 10px;
     color: var(--color-secondary);
     background-color: rgba(0, 0, 0, 0.568);
-    box-shadow: 2px 2px 50px rgba(167, 167, 167, 0.349);
-    backdrop-filter: blur(10px);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.699);
+    backdrop-filter: blur(15px);
     text-align: center;
     align-content: center;
     text-shadow: 2px 2px 5px black;
 }
+.texto-editorial p{
+    padding-bottom: 5%;
+}
 /*=================*/
 
 .button-fundadoras{
-    padding: 2%;
+    cursor: pointer;
+    padding: 0;
+    width: 12%;
+    height: 27%;
+    border-radius: 70px;
     border: none;
-    background-color: rgb(0, 0, 0);
-    border-radius: 4px;
-    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.151);
-    color: var(--color-secundary);
-    transition: all .3s ease;
+    transition: width .3s ease, height .3s ease;
+    
 }
 .button-fundadoras:hover{
-    box-shadow: 1px 1px 70px -10px var(--color-primary);
-    cursor: pointer;
+    width: 13%;
+    height: 29%;   
+}
+
+.button-fundadoras img{
+    width: 100%;
+    align-self: center;
+    transition: transform .5s ease;
+}
+.button-fundadoras img:hover{
+    transform:rotate(360deg);
+    width: 102%;
 }
 
 /* =========================== */
@@ -238,3 +264,28 @@ section{
 /*=================*/
 /* Section_5*/
 /*=================*/
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-float img {
+  width: 60%;
+  margin-top: 10px;
+}

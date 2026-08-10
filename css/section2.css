@@ -49,7 +49,7 @@
     grid-column: 4/6;
 }
 .front{
-    
+    position: relative;
     background-color: rgb(43, 42, 42);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.363);
     color: white;
@@ -66,16 +66,18 @@
     box-shadow .3s ease,
     transform .3s ease;
 }
-
 .front img{
     width: 100%;
+    height: 55%;
+    object-fit: cover;
 }
 .front h3{
     color:var(--color-secondary);
     text-shadow: 2px 2px 5px black;
     text-align: center;
     position: absolute;
-    bottom: 15px;
+    bottom: 10px;
+    margin: 0;
 }
 .back{
     display: flex;
@@ -93,7 +95,6 @@
     transition:
     opacity .4s ease,
     transform .4s ease;
-    
 }
 .back p{
     font-size: small;
@@ -104,5 +105,123 @@
 .back:hover{
     opacity:1;
     transform: translateY(0px);
+}
+/* ================================== */
+.container-proyectos{
+    background-image: url(../assets/imagenes/body/section_1/fondo_vista_principal_2.png);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.container-imagenYMetrica{
+    height: 70%;
+    display: flex;
+    position: relative;
+}
+
+/* slide boomerang Imagenes */
+
+.container-imgProyectos{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1%;
+    padding: 1%;
+}
+.slide-proyectos{
+    width: 10%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #e12587;
+    transition: width .8s ease;
     
 }
+.slide-proyectos:hover{
+    width: 24.5%;
+}
+.slide-proyectos img{
+    object-fit: cover;
+    margin: 0;
+    filter: grayscale(100%);
+    transition: filter .5s ease;
+}
+.slide-proyectos img:hover{
+    filter: grayscale(0%);
+
+}
+
+/* Metricas */
+
+.container-metProyectos{
+    width: 40%;    
+    height: 100%;
+    left: 56%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    color: white;
+}
+.met h1,h4,p{
+    margin: 0;
+    padding: 0;
+    line-height: 170%;
+}
+.met.textoBottom{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+.met.textoUp p{
+    position: relative;
+}
+.met.textoUp p::after{
+    content: "";
+    position: absolute;
+    left:0;
+    bottom:-5px;
+    width: 0;
+    height: 2px;
+    background:var(--color-primary);
+    transition: width .8s ease;
+}
+.met.textoUp p:hover::after, h1:hover::after{
+    width: 100%;
+}
+
+.container-loop{
+    height: 30%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.container-loop .marcas-loop{
+    background-color: #ffffff1e;
+    box-shadow: 1px 1px 10px rgba(61, 61, 61, 0.47);
+    height: 80%;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+    animation: scroll 20s linear infinite;
+    
+}
+.container-loop .marcas-loop img{
+    height: 60%;
+    filter:grayscale(100%);
+    transition: filter .3s ease;
+}
+.container-loop .marcas-loop img:hover{
+    filter:grayscale(0%);
+}
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-15%)
+    }
+}
+
