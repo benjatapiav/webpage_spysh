@@ -1,0 +1,37 @@
+@media (max-width: 767px){
+    nav{
+        border: 1px solid red;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        z-index: 10000;
+    }
+    .nav-container-logo{
+        display: none;
+    }
+    .nav-container-links{
+        width: 100%;
+        height: auto;
+
+        justify-content: space-around;
+        align-items: center;
+
+        opacity: 1;
+        gap: 0;
+        box-sizing: border-box;
+    }
+
+    .nav-container-links a{
+        width: auto;
+        max-width: 20%;
+        font-size:12px;
+        
+        
+        border: 1px solid blue;
+    }
+    .nav-container-links #navVistaPrincipal{
+        display: block;
+    }
+}

@@ -5,6 +5,10 @@
 @import url(footer.css);
 @import url(section3.css);
 
+/* Mobile */
+@import url(mq_mobile/mq_vistaPrincipal.css);
+@import url(mq_mobile/mq_navbar.css);
+
 html {
   scroll-behavior: smooth;
 }
@@ -13,6 +17,5 @@ body{
     flex-direction: column;
     margin:0;
     padding: 0;
-    overflow-x: hidden;
     font-family: var(--font-secondary);
 }

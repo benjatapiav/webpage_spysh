@@ -1,9 +1,8 @@
 nav{
-    width: 100%;
     height: 10%;
     display: flex;
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     transition: 
         background-color  .5s ease,
         color .5s ease,
@@ -16,21 +15,28 @@ nav:hover{
 nav:hover .nav-container-links{
     opacity: 1;
 }
-
-
 /* Logotipo de navbar*/
 
 .nav-container-logo{
-    max-width: 30%;
+    width: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    padding-left: 1%;
+    align-items: center;
+}
+.nav-container-logo a{
+    display: flex;
+    height: 100%;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    
+    
 }
 .nav-container-logo .container-logo img{
     width: 10%;
     transform: scale(1);
     transition: transform .3s ease;
+    
 }
 .nav-container-logo .container-logo img:hover{
     transform: scale(1.2);
@@ -39,26 +45,29 @@ nav:hover .nav-container-links{
 
 .nav-container-links{
     opacity: 0;
-    width: 70%;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+    width: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 15%;
+
 }
 
 .nav-container-links a{
-    width: 60%;
+    padding-left: 1%;
+    padding-right: 1%;
     text-decoration: none;
     list-style: none;
     color: var(--color-secondary);
     border-radius: 5px;
     transition:
         color .3s ease, 
-        font-size .3s ease,
         background-color .4s ease,
         box-shadow .5s ease;
-    
-
+}
+.nav-container-links #navVistaPrincipal{
+    display: none;
 }
 .nav-container-links a:hover{
     color: var(--color-primary);
