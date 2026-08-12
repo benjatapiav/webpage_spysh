@@ -8,6 +8,7 @@
 /* Mobile */
 @import url(mq_mobile/mq_vistaPrincipal.css);
 @import url(mq_mobile/mq_navbar.css);
+@import url(mq_mobile/mq_servicios.css);
 
 html {
   scroll-behavior: smooth;

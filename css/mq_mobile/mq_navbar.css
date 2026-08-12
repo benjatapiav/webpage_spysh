@@ -1,37 +1,69 @@
 @media (max-width: 767px){
+    /* ======== */
+    /* Nav Menu */
+    /* ======== */
+
+
     nav{
-        border: 1px solid red;
+        background-color: var(--color-secondary);
         left: 0;
         bottom: 0;
         width: 100%;
-        height: auto;
+        height: 8%;
         box-sizing: border-box;
         z-index: 10000;
+        border-radius: 20px 20px 0px 0px;
     }
+    nav:hover{
+        background-color: var(--color-secondary);
+    }
+    
     .nav-container-logo{
         display: none;
     }
     .nav-container-links{
         width: 100%;
-        height: auto;
-
-        justify-content: space-around;
-        align-items: center;
-
+        height: 100%;
         opacity: 1;
         gap: 0;
+        
         box-sizing: border-box;
     }
-
     .nav-container-links a{
         width: auto;
-        max-width: 20%;
-        font-size:12px;
-        
-        
-        border: 1px solid blue;
+        width: 20%;
+        height: auto;
+        font-size:8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: black;
     }
     .nav-container-links #navVistaPrincipal{
-        display: block;
+        display: flex;
     }
+    .nav-container-links .logoNav{
+        display:block;
+        width: 22%;
+    }
+
+    .nav-container-links a:hover{
+        color: black;
+        background-color:initial;
+        border-radius: 5px;
+        box-shadow:none;
+        text-shadow: none;
+    }
+
+    #navQuienesSomos{
+        font-size:0 ;
+    }
+    
+    #navQuienesSomos::after{
+        content:"Nosotras";
+        font-size: 8px;
+    }
+    
+
 }

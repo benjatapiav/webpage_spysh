@@ -10,7 +10,7 @@
         flex-direction: column;
         align-items: center;
         
-        border:2px solid white ;
+        
     }
     .imagenVistaPrincipal{
         width: 100%;
@@ -21,10 +21,18 @@
         position: relative;
     }
     .imagenVistaPrincipal img{
-        width: 60%;
+        width: 70%;
         top: 10%;
         position: absolute;
         
+    }
+    .quienes-somos{
+    }
+    .servicios{
+        
+    }
+    .proyectos{
+        display: none;
     }
 
 }
