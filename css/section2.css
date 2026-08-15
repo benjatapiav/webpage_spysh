@@ -11,12 +11,7 @@
     background-size: contain;
     
 }
-.container-servicios h1{
-    margin: 0;
-    padding: 0;
-    color: var(--color-secondary);
-    text-shadow: 2px 2px 5px black;
-}
+
 .caja-servicios{
     width: 80%;
     height: 90%;
@@ -76,10 +71,15 @@
     object-fit: cover;
 }
 .front h3{
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
     color:var(--color-secondary);
     text-shadow: 2px 2px 5px black;
     position: absolute;
-    bottom: 10%;    
+    bottom: 0%;    
+    padding: 3%;
+    
 }
 .back{
     display: flex;

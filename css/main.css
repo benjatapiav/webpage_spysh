@@ -9,6 +9,9 @@
 @import url(mq_mobile/mq_vistaPrincipal.css);
 @import url(mq_mobile/mq_navbar.css);
 @import url(mq_mobile/mq_servicios.css);
+@import url(mq_mobile/mq_nosotras.css);
+@import url(mq_mobile/mq_contacto.css);
+@import url(mq_mobile/mq_footer.css);
 
 html {
   scroll-behavior: smooth;

@@ -5,16 +5,16 @@
 }
 .contacto-fondo{
     width: 50%;
+    
 }
 .contacto-fondo img{
     width: 100%;
 }
 .contacto-formFondo{
-    display: flex;
     width: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    
 }
 .contacto-formulario{
     width: 70%;
@@ -39,8 +39,8 @@
 }
 .fondoRedondo{
     width: 110%;
-    height: 80%;
-    bottom: -10%;
+    height: 90%;
+    top:30%;
     position: absolute;
     background-color: var(--color-secondary);
     border-radius: 20px 20px 5px 5px;
@@ -50,8 +50,8 @@
     position: absolute;   
     z-index: 3;
     width: 70%;
-    height: 65%;
-    top: 40%;
+    height: 80%;
+    top: 35%;
     right: 15%;
     font-size: smaller;
 }

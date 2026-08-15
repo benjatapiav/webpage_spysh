@@ -1,5 +1,5 @@
 const botonFundadoras = document.getElementById("buttonFundadoras");
-const botonBack = document.getElementById("buttonBack");
+const botonBack = document.getElementById("buttonVolver");
 
 const containerEditorial = document.getElementById("capaEditorial")
 const containerFundadoras = document.getElementById("capaFundadoras");

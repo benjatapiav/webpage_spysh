@@ -1,0 +1,48 @@
+@media (max-width: 767px){
+    .servicios{
+        height: 300vh;
+    }
+    .caja-servicios{
+        
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5,1fr);
+        gap: 0;
+        justify-items: center;
+        align-items: center;
+        
+    }
+    .back p{
+        font-size: large;
+    }
+
+    .caja.uno,
+    .caja.dos,
+    .caja.tres,
+    .caja.cuatro,
+    .caja.cinco{
+        grid-column: auto;
+    }
+
+    .caja{
+        
+        text-align: center;
+        width: 95%;
+        height: 80%;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px rgb(44, 44, 44);
+    }
+    .front h3{
+        position: absolute;
+        font-size: 20px;
+        bottom: 0%;
+    }
+
+    .front img{        
+        border-radius: 10px;
+        width: 98%;
+        height: 70%;
+    }
+}

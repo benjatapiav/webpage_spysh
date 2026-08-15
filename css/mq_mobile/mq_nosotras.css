@@ -1,0 +1,10 @@
+@media (max-width:767px){
+
+    .container-card{
+        grid-template-columns: repeat(1, minmax(0,1fr));
+        gap: 10%;
+
+    }
+
+
+}

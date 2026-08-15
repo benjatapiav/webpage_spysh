@@ -1,0 +1,51 @@
+@media (max-width: 600px){
+    .container-contacto{
+        background-color: black;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+        
+    }
+    .contacto-fondo {
+        position: absolute;
+        display:none;
+    }
+    .contacto-formFondo{
+        position: relative;
+        width: 100%;
+        height: 80%;
+        
+    }
+    .fondoRedondo{
+        bottom: 0%;
+        height: 75%;
+    }
+    .contacto-formulario{
+        position: absolute;
+        width: 80%;
+        top: 3%;
+    }
+    .iconoMensaje img{
+        height: 55%;
+        width: 30%;
+    }
+    .formulario{
+        font-size: medium;
+        height: 80%;
+        
+    }
+    .containerFormulario{
+        width: 80%;
+        right: 10%;
+        top: 35%;
+    }
+    textarea{
+        height: 80%;
+    }
+    .buttonContacto{
+        width: 50%;
+        padding: 3%;
+    }
+
+}

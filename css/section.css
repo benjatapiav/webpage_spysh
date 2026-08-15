@@ -57,7 +57,7 @@ section{
     visibility: visible;
 }
 .fondo{
-    z-index:1;
+    background-image: url(../assets/imagenes/body/section_1/fondo_spysh_santiago_2.png);
     display:flex;
     justify-content: space-between;
 }
@@ -139,118 +139,153 @@ section{
 .button-fundadoras{
     cursor: pointer;
     padding: 0;
-    width: 12%;
-    height: 27%;
-    border-radius: 70px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: url(../assets/imagenes/navbar/logo_spysh_magenta_fondo_blanco.png);
+    background-position:center ;
+    background-size: cover;
     border: none;
-    transition: width .3s ease, height .3s ease;
-    
+    transform: scale(1);
+    transform: rotate(0deg);
+    transition: transform .3s ease;
 }
 .button-fundadoras:hover{
-    width: 13%;
-    height: 29%;   
-}
-
-.button-fundadoras img{
-    width: 100%;
-    align-self: center;
-    transition: transform .5s ease;
-}
-.button-fundadoras img:hover{
-    transform:rotate(360deg);
-    width: 102%;
+    transform: scale(1.1);
+    box-shadow: 1px 1px 5px black;
 }
 
 /* =========================== */
+.fundadoras{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.212);    
+    backdrop-filter: blur(5px);
+}
+
 .container-card{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:5%;
+    width: 70%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+}
+.card{
     
-}
-.card.maricristy,.card.gladys{
-    height: 75%;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: .5%;
-    border-radius: 5px;
-    text-align: center;
-    background-color: white;
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.705);
-    
-}
-.card.maricristy .maricristy-front, .card.gladys .gladys-front{
-    height: 100%;
-    position: relative;
-}
-/* Imagen de Cards*/
-.maricristy-front img, .gladys-front img{
     width: 100%;
-    height: 80%;
-    border-radius: 5px;
-    
-}
-/* Titulo de Cards*/
-.maricristy-front h1, .gladys-front h1{
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.438);
-    color: black;
-    font-size: larger;
-    margin: 0;
-    display: inline-block;
-    border-bottom: 2px solid #e12587;
-    padding-bottom: 5px;
-}
-
-/* div front cards*/
-
-/* div back cards*/
-.maricristy-back, .gladys-back{
-    position: absolute;
-    z-index: 5;
-    height: 75%;
-    width: 30%;
+    border-radius: 10px;
+    background-color: var(--color-primary);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: var(--color-primary);
-    opacity: 0;
-    transition: opacity .5s ease;
-}
-.maricristy-back:hover, .gladys-back:hover{
-    opacity: 1;
-}
-.maricristy-back p, .gladys-back p{
-    color: white;
-    padding: 5%;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.438);
-}
-.button-volver{
-    width: 6%;
-    height: 5%;
-    padding: 0;
-    margin: 0;
-    border-radius: 60px;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-content: center;
     align-items: center;
+    position: relative;
+    gap: 5%;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+
+}
+.card::after, .card::before{
+    --angle: 0deg;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: conic-gradient(from var(--angle), transparent 40%, red);
+    background-image: conic-gradient(from var(--angle),transparent 50%, white);
+    z-index: -1;
+    padding: 1px;
+    position: absolute;
+    animation: 5s girar linear infinite;
+    
+}
+.card::before{
+    filter: blur(5px);
+    
+}
+@keyframes girar{
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+
+.button-Volver{
+    background-image: url(../assets/imagenes/navbar/logo_spysh_blanco_fondo_magenta.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border: none;
+    justify-self: center;
+    align-self: center;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    transform: scale(1);
+    transition: transform .3s ease;
     cursor: pointer;
 }
-.button-volver img{
-    width: 100%;
-    transition: transform .3s ease, width .3s ease;
-}
-.button-volver img:hover{
-    width: 110%;
-    transform: rotate(360deg);
+.button-Volver:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 1px 5px black;
 }
 
+
+.card img{
+    width: 50%;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    position: relative;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.445);
+}
+.card h1{
+    text-align: center;
+    text-shadow: 1px 1px 5px black;
+    color: white;
+    font-size: x-large ;   
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.card h1::after{
+    content: "";
+    position: absolute;
+    width: 70%;
+    bottom: -80%;
+    border-bottom: 1px solid white;
+}
+
+.card .infoCard{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--color-primary);
+    border: 2px solid white;
+    opacity: 0;
+    transition: opacity .3s ease;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.37) inset;
+}
+.card .infoCard p{
+    font-size: small;
+    padding: 5%;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+.card:hover .infoCard{
+    opacity: 1;
+}
 
 /*=================*/
 /* Section_3*/

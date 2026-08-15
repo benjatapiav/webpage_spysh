@@ -1,0 +1,56 @@
+@media (max-width: 767px) {
+
+    .container-footer {
+        height: auto;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .caja-footer {
+        height: auto;
+        min-height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: initial;
+    }
+
+    .footer {
+        width: 100%;
+    }
+
+    .footerCenter {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logoPrincipalSpysh {
+        width: 80%;
+    }
+
+    .logos-footer {
+        display: flex;
+        gap: 20px;
+    }
+    .logos-footer a {
+        width: auto;
+    }
+ 
+    .logos-footer img {
+        width: 45px;
+    }
+
+    .caja-under-footer {
+        position: relative;
+        height: auto;
+        width: 100%;
+    }
+    .caja-under-footer {
+        position: absolute;
+        bottom: 20%;
+
+    }
+
+}
