@@ -12,33 +12,41 @@
 <!-- === Menu === -->
 <!-- ============ -->
 
-<nav>
+<nav class="nav" aria-label="Navegacion Principal">
     <div class="nav-container-logo">
-        <a href="#" class="container-logo">
-            <img src="assets/imagenes/navbar/logo_spysh_blanco_fondo_magenta.png" alt="" href="#">
-        </a>
+        <a href="#vista-principal" class="nav-logo" aria-label="Volver al Inicio"></a>
     </div>
     <div class="nav-container-links">
-        <a href="#vista-principal" id="navVistaPrincipal">
-            <img src="assets/mq_img/navbar/icono_inicio.png" alt="" class="logoNav">
-            Inicio
-        </a>
-        <a href="#servicios" id="navServicios">
-            <img src="assets/mq_img/navbar/icono_servicios.png" alt="" class="logoNav">
-            Servicios
-        </a>
-        <a href="#quienesSomos" id="navQuienesSomos">
-            <img src="assets/mq_img/navbar/icono_nosotras.png" alt="" class="logoNav">
-            Quienes Somos
-        </a>
-        <a href="#proyectos" id="navProyectos">
-            <img src="assets/mq_img/navbar/icono_proyectos.png" alt="" class="logoNav">
-            Proyectos
-        </a>
-        <a href="#contacto" id="navContacto">
-            <img src="assets/mq_img/navbar/icono_contacto.png" alt="" class="logoNav">
-            Contacto
-        </a>
+        <div class="nav-box box-inicio" >
+            <a href="#vista-principal" class="nav-item nav-inicio">
+                <img src="assets/mq_img/navbar/icono_inicio.png" alt="" class="logoNav">
+                <p>Inicio</p>
+            </a>
+        </div>
+        <div class="nav-box box-servicios">
+            <a href="#servicios" class="nav-item nav-servicios">
+                <img src="assets/mq_img/navbar/icono_servicios.png" alt="" class="logoNav">
+                <p>Servicios</p>
+            </a>
+        </div>
+        <div class="nav-box box-nosotras">
+            <a href="#quienesSomos" class="nav-item nav-nosotras">
+                <img src="assets/mq_img/navbar/icono_nosotras.png" alt="" class="logoNav">
+                <p>Nosotras</p>
+            </a>
+        </div>
+        <div class="nav-box box-proyectos">
+            <a href="#proyectos" class="nav-item nav-proyectos">
+                <img src="assets/mq_img/navbar/icono_proyectos.png" alt="" class="logoNav">
+                <p>Proyectos</p>
+            </a>
+        </div>
+        <div class="nav-box">
+            <a href="#contacto" class="nav-item nav-contacto">
+                <img src="assets/mq_img/navbar/icono_contacto.png" alt="" class="logoNav">
+                <p>Contacto</p>
+            </a>
+        </div>
     </div>
 </nav>
     
@@ -48,8 +56,8 @@
 
 <!-- === Vista Principal ===-->
 <section class="vista-principal" id="vista-principal">
-    <div class="imagenVistaPrincipal">
-        <img src="assets/imagenes/body/section_1/logo_spysh_original.png" alt="">
+    <div class="container-imagen-vista-principal">
+        <img src="assets/imagenes/body/section_1/logo_spysh_original.png" alt="" id="imagen-vista-principal">
     </div>
 </section>
 <!-- === Servicios ===-->
@@ -113,7 +121,7 @@
         <div class="texto-editorial">
             <p>
                 No solo comunicamos lo que haces. Encontramos la 
-                manera de hacerlo visible. En SPYSH Comunicaciones 
+                manera de hacerlo visible. <br>En SPYSH Comunicaciones 
                 somos una agencia especializada en prensa, comunicación 
                 estratégica y difusión. Trabajamos junto a empresas, 
                 organizaciones e instituciones para conectar sus 
@@ -127,9 +135,9 @@
         </div>
     </div>
     <div class="capa fundadoras" id="capaFundadoras" >
-        <div class="container-card" id="cardFundadoras">
+        
             <div class="card gladys">
-                <img src="assets/imagenes/body/section_2/gladys.png" alt="">
+                <img src="assets/imagenes/body/section_2/gladys.jpeg" alt="">
                 <h1>Gladys Cárdenas O.</h1>
                 <div class="infoCard">
                     <p>Comunicadora y locutora, 
@@ -144,12 +152,9 @@
                 </div>
                 
             </div>
-            
-            
             <button class="button-Volver" id="buttonVolver"></button>
-            
             <div class="card maricristy">
-                <img src="assets/imagenes/body/section_2/maricristy.png" alt="">
+                <img src="assets/imagenes/body/section_2/maricristy.jpeg" alt="">
                 <h1>Maricristy Vergara F.</h1>
                 <div class="infoCard">
                     <p>Diseñadora Gráfica Publicitaria 
@@ -166,10 +171,11 @@
             </div>
             
 
-        </div>
+        
     </div>
     
-  
+  -
+
 </section>
 <!-- === Proyectos ===-->
 <section class="proyectos" id="proyectos">
@@ -265,21 +271,28 @@
 
                 </div>
                 <div class="containerFormulario">
-                    <form action="" class="formulario">
-                    <label for="nombre">Nombre</label><br>
-                    <input type="text" id="nombre" required><br>
+                    <form action="enviar.php" method="POST" class="formulario">
+
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
     
-                    <label for="apellido">Apellido</label><br>
-                    <input type="text" id="apellido"><br>
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido">
     
-                    <label for="mail">Correo electrónico</label><br>
-                    <input type="text" id="email" required><br>
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required>
     
-                    <label for="comentarios">Comentarios</label><br>
-                    <textarea name="cmentarios" minlength="10" maxlength="500" id="comentarios" required></textarea><br>
+                        <label for="comentarios">Comentarios</label>
+                        <textarea 
+                            name="comentarios" 
+                            minlength="10" 
+                            maxlength="50" 
+                            id="comentarios" 
+                            required>
+                        </textarea><br>
     
-                    <button type="submit" class="buttonContacto" id="buttonContacto">Enviar</button>
-                </form>
+                        <button type="submit" class="buttonContacto" id="buttonContacto">Enviar</button>
+                    </form>
 
 
                 </div>
@@ -342,3 +355,5 @@
     <script src="js/quienes_somos.js"></script>
 </body>
 </html>
+
+

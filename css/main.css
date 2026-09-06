@@ -13,13 +13,17 @@
 @import url(mq_mobile/mq_contacto.css);
 @import url(mq_mobile/mq_footer.css);
 
+* {
+  box-sizing: border-box;
+}
 html {
   scroll-behavior: smooth;
 }
 body{
-    display: flex;
-    flex-direction: column;
     margin:0;
     padding: 0;
     font-family: var(--font-secondary);
+}
+section{
+  height: auto;
 }

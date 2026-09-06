@@ -1,9 +1,43 @@
 @media (max-width:767px){
+    .fundadoras{
+        background: none;
+    }
+    .texto-editorial{
+        width: 80%;
+        height: 70%;
+    }
+    .texto-editorial p{
+        font-size: 70%;
+    }
+    .button-fundadoras{
+        width: 22%;
+        height: 17%;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.514) inset;
+    }
+    .button-Volver{
+        width: 50px;
+        height: 50px;
+    }
 
     .container-card{
         grid-template-columns: repeat(1, minmax(0,1fr));
-        gap: 10%;
+        gap: 3%;
+        width: 95%;
+        height: 90%;
+    }
+    .card{
+        gap: 0;
+    }
+    .card img{
+        width: 35%;
+        border: 1px solid black;
+    }
+    .card h1{
+        border: 1px solid black;
 
+    }
+    .card h1::after{
+        bottom: -30%;
     }
 
 
