@@ -1,95 +1,90 @@
-.container-contacto{
-    height: 100vh;
-    display: flex;
-    background-image: url(../assets/imagenes/body/section_1/fondo_vista_principal.png);
-}
-.contacto-fondo{
-    width: 50%;
-    
-}
-.contacto-fondo img{
-    width: 100%;
-}
-.contacto-formFondo{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    
-}
-.contacto-formulario{
-    width: 70%;
-    height: 80%;
+.contacto{
+    height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    position: relative;
-    border-radius: 5px;
-    background-image: url(../assets/imagenes/body/section_contacto/fondo_rosa_form.png);
-}
-.iconoMensaje{
-    width: 100%;
-    height: 30%;
-    display: flex;    
     justify-content: center;
     align-items: center;
-}
-.iconoMensaje img{
-    width: 20%;
-    height: 70%;
-}
-.fondoRedondo{
-    width: 110%;
-    height: 90%;
-    top:30%;
-    position: absolute;
-    background-color: var(--color-secondary);
-    border-radius: 20px 20px 5px 5px;
-    box-shadow: 2px 2px 10px rgb(49, 49, 49);
-}
-.containerFormulario{
-    position: absolute;   
-    z-index: 3;
-    width: 70%;
-    height: 80%;
-    top: 35%;
-    right: 15%;
-    font-size: smaller;
-}
-.formulario{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    font-size: small;
-    line-height: 80%;
-}
-.buttonContacto{
-    padding: 2%;
-    width: 40%;
-    align-self: center;
-    border-radius: 20px ;
-    border: none;
-    background-color: var(--color-primary);
-    color:var(--color-secondary);
-    transform: scale(1);
-    transition: 
-        color .3s ease,
-        transform .3s ease,
-        box-shadow .3s ease;
-}
-.buttonContacto:hover{
-    color:white;
-    transform: scale(1.03);
-    cursor: pointer;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.247);
-}
-input{
-    border: none;
-    border-radius: 3px;
-}
-textarea{
-    border: none;
-    border-radius: 3px;
-    width: 100%;
-    height: 100%;
+    background-color: black;
+
+    .formulario{
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6,1fr);
+        position: relative;
+
+        height: auto;
+        width: clamp(400px, 5vw, 600px);
+
+        margin: 5%;
+        padding: 2%;
+
+        border-radius: 15px;
+        background-image: linear-gradient(to right,rgb(12, 12, 12), rgb(53, 53, 53));
+        color: var(--color-secondary);
+        z-index: 1;
+        
+        input{
+            outline: none;
+            border-radius: 15px;
+            height: 80%;
+            padding: 2%;
+            background-color: black;
+            
+            border: none;
+            color: var(--color-secondary);
+            resize: none;
+        }
+        input:focus{
+            
+            background-image: linear-gradient(to left,rgb(12, 12, 12), rgb(17, 17, 17));
+        }
+        
+        textarea{
+            
+            outline: none;
+            background-color: black;
+            border-radius: 15px;
+            height: clamp(150px, 5vw, 200px);
+            max-width: 100%;
+            padding: 2%;
+            resize: none;
+            text-align: start;
+            border: none;
+            color: var(--color-secondary);
+        }
+        textarea:focus{
+            background-image: linear-gradient(to left,rgb(12, 12, 12), rgb(17, 17, 17));
+
+        }
+        button{
+            width: clamp(50%, 5vw, 60%);
+            height: clamp(20px, 5vw, 45px);
+
+            margin-top: 15px;
+            justify-self: center;
+
+            background-color: var(--color-primary);
+            border: none;
+            border-radius: 10px 0px 10px 0px;
+            transform: scale(1);
+            transition: all .5s ease;
+            color: var(--color-secondary);
+            text-shadow: 1px 1px 5px blackvamo;
+            
+            font-size:clamp(14px, 1.2vw, 25px) ;
+            letter-spacing: 3px;
+            text-shadow: 1px 1px 5px black;
+        }
+        button:hover{
+            transform: scale(.9);
+            letter-spacing: 6px;
+            color: black;
+            text-shadow: 1px 1px 5px rgb(71, 71, 71);
+            box-shadow: 1px 1px 8px black;
+        }
+    }
+
+
+   
 }

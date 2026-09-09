@@ -5,13 +5,12 @@ nav{
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 100%;
+    align-items: center;
     position: fixed;
     z-index: 1000;
     transition: 
         background-color  .5s ease,
-        
         opacity .5s ease;
-    
 
         .nav-container-logo{
             width: 100%;
@@ -46,9 +45,7 @@ nav{
             .nav-box.box-inicio{
                 display: none;
             }
-            .nav-box{
-                
-            }
+
             .nav-item{
                 height: 100%;
                 opacity: 0;

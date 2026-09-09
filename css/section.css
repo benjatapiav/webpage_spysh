@@ -19,9 +19,6 @@
     }
 }
 
-
-
-
 /*=================*/
 /*==== INICIO ====*/
 /*=================*/
@@ -183,14 +180,15 @@
         display: grid;
         grid-template-columns: 30% 10% 30%;
         grid-template-rows: 80%;
+        align-items: center;
         align-content: center;
         justify-content: center;
         grid-gap: 5%;
-
+        
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
-
+        
         transform: translateY(30px);
         filter: blur(6px);
 
@@ -203,16 +201,15 @@
         /* ============================= */
 
         .card {
+            
             border-radius: 10px;
-
+            height: clamp(350px, 40vw, 600px);
             background-color: var(--color-primary);
 
             display: grid;
             grid-template-rows: 4fr 1fr;
             justify-items: center;
             align-items: center;
-
-            
 
             position: relative;
 
