@@ -306,7 +306,7 @@
             display: flex;
             align-items: center;
             gap: 1%;
-            animation: scroll 20s linear infinite;
+            animation: scroll 50s linear infinite;
 
             img{
                 height: 90%;

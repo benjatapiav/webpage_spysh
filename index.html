@@ -171,8 +171,6 @@
 
         
     </div>
-    
-  -
 
 </section>
 <!-- === Proyectos ===-->
@@ -220,6 +218,7 @@
             <div class="marcas-loop">
                 <img src="assets/imagenes/body/section_proyectos/AMMA.png" alt="">
                 <img src="assets/imagenes/body/section_proyectos/BAMBUDDA.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/CALAVERA_ACADEMY.png" alt="">
                 <img src="assets/imagenes/body/section_proyectos/BTL.png" alt="">
                 <img src="assets/imagenes/body/section_proyectos/HIPNOSALUD.png" alt="">
                 <img src="assets/imagenes/body/section_proyectos/HOME_PLUS.png" alt="">
@@ -230,9 +229,24 @@
                 <img src="assets/imagenes/body/section_proyectos/MOI.png" alt="">
                 <img src="assets/imagenes/body/section_proyectos/NINI_DIGMANN.png" alt="">
                 <img src="assets/imagenes/body/section_proyectos/VALERIO.png" alt="">
-            
+                <img src="assets/imagenes/body/section_proyectos/BRISAS_DEL_MAR.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/CHICUREO_TRAVEL.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/DI_TREVI.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/EXOTICA.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/TURKISH_STEEL.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/LIMA_LIMON.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/MACHU_PICCHU.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/METROPOLITAN_SHOES.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/PERU_MAGICO.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/PROM_PERU.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/SOMOS_PERU.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/SON_PERU.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/WARIQUE.png" alt="">
+
+
                 <img src="assets/imagenes/body/section_proyectos/AMMA.png" alt="">
                 <img src="assets/imagenes/body/section_proyectos/BAMBUDDA.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/CALAVERA_ACADEMY.png" alt="">
                 <img src="assets/imagenes/body/section_proyectos/BTL.png" alt="">
                 <img src="assets/imagenes/body/section_proyectos/HIPNOSALUD.png" alt="">
                 <img src="assets/imagenes/body/section_proyectos/HOME_PLUS.png" alt="">
@@ -243,6 +257,20 @@
                 <img src="assets/imagenes/body/section_proyectos/MOI.png" alt="">
                 <img src="assets/imagenes/body/section_proyectos/NINI_DIGMANN.png" alt="">
                 <img src="assets/imagenes/body/section_proyectos/VALERIO.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/BRISAS_DEL_MAR.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/CHICUREO_TRAVEL.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/DI_TREVI.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/EXOTICA.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/TURKISH_STEEL.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/LIMA_LIMON.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/MACHU_PICCHU.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/METROPOLITAN_SHOES.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/PERU_MAGICO.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/PROM_PERU.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/SOMOS_PERU.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/SON_PERU.png" alt="">
+                <img src="assets/imagenes/body/section_proyectos/WARIQUE.png" alt="">
+
 
                 
             </div>
@@ -254,7 +282,7 @@
 <section class="contacto" id="contacto">
 
 
-            <form action="enviar.php" method="POST" class="formulario">
+            <form action="enviar.php" method="POST" class="formulario" id="formularioContacto">
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" required>
                 <label for="apellido">Apellido</label>
@@ -270,8 +298,12 @@
                     required
                 ></textarea>
                 
-                <button type="submit" class="buttonContacto" id="buttonContacto">Enviar</button>
-                
+                <button type="submit" id="buttonContacto">Enviar</button>
+                <div class="respuestaFormulario" id="respuestaFormulario">
+                    <span id="iconoRespuesta"></span>
+                    <h4 id="tituloRespuesta"></h4>
+                    <p id="textoRespuesta"></p>
+                </div>
             </form>
         
 </section>
@@ -311,7 +343,7 @@
         </div>
         <div class="caja-under-footer">
             <p>@2026 Spysh Comunicaciones spa.
-            <p>Desarrollado por Benjamin Tapia / +56986614003</p>
+            
         </div>
     </div>
 </footer>
