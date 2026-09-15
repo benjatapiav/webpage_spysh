@@ -57,17 +57,54 @@ formularioContacto.addEventListener("submit", async (evento)=>{
     buttonContacto.disabled = true;
     buttonContacto.textContent = "Enviando...";
 
+    // Recopilamos los datos del formulario
     const datosFormulario = new FormData(formularioContacto);
     
-    // fetch
-    const respuesta = await fetch("enviar.php",{
-        method:"POST",
-        body:datosFormulario
-    });
-    const resultado = await respuesta.json();
 
-    buttonContacto.disabled = false;
-    buttonContacto.textContent = "Enviar";
+    try{
+        // Enviamos los datos a PHP
+        const respuesta = await fetch("enviar.php",{
+            method:"POST",
+            body:datosFormulario
+        });
+        // Convertimos la respuesta JSON de PHP a un objeto de JS
+        const resultado = await respuesta.json();
+    
+        if(resultado.ok){
 
-    console.log(resultado);
+            iconoRespuesta.textContent = "✓";
+            tituloRespuesta.textContent = "Mensaje enviado";
+            textoRespuesta.textContent = 
+                "Gracias por comunicarte con SPYSH. Te responderemos a la brevedad";
+                
+            respuestaFormulario.classList("visible");
+                
+            // Limpiamos el formulario
+            formularioContacto.reset();
+        }else{
+                
+            // PHP respondió, pero informó que ocurrió un problema
+            iconoRespuesta.textContent = "!";
+            tituloRespuesta.textContent = "No se pudo enviar";
+            textoRespuesta.textContent = resultado.mensaje;
+            respuestaFormulario.classList.add("visible","error");
+        }
+    }catch(error){
+
+        // Error durante la comunicación con el servidor
+        iconoRespuesta.textContent = "!";
+        tituloRespuesta.textContent = "Error de conexión";
+        textoRespuesta.textContent =
+            "No fue posible enviar el mensaje. Inténtelo nuevamente";
+
+        respuestaFormulario.classList.add("visible","error");
+
+        console.log("Error al enviar el formulario: ", error);
+
+    }finally{
+
+        // Esto ocurre tanto si funcionó como si falló
+        buttonContacto.disabled = false;
+        buttonContacto.textContent = "Enviar";
+    }    
 });
