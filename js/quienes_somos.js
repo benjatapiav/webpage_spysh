@@ -28,6 +28,7 @@ botonVolver.addEventListener("click", () => {
 // ======================= //
 
 const formularioContacto = document.getElementById("formularioContacto");
+/* @type {HTMLButtonElement} */
 const buttonContacto = document.getElementById("buttonContacto");
 const respuestaFormulario = document.getElementById("respuestaFormulario");
 const iconoRespuesta = document.getElementById("iconoRespuesta");
@@ -45,32 +46,28 @@ console.log("Texto: ", textoRespuesta);
 // PRUEBA 4: MOSTRAR MENSAJE DE RESPUESTA
 // ============================================== //
 
-formularioContacto.addEventListener("submit", (evento) => {
+formularioContacto.addEventListener("submit", async (evento)=>{
+
     evento.preventDefault();
 
-    console.log("Simulando envío...");
+    // Ocultamos cualquier respuesta anterior
+    respuestaFormulario.classList.remove("visible","error")
 
-    respuestaFormulario.classList.remove(
-        "visible",
-        "error"
-    );
-
-    buttonContacto.setAttribute("disabled", "");
+    // Desactivamos el botón mientras se procesa el envío
+    buttonContacto.disabled = true;
     buttonContacto.textContent = "Enviando...";
 
-    setTimeout(() => {
-        iconoRespuesta.textContent = "✓";
-        tituloRespuesta.textContent = "Mensaje enviado";
+    const datosFormulario = new FormData(formularioContacto);
+    
+    // fetch
+    const respuesta = await fetch("enviar.php",{
+        method:"POST",
+        body:datosFormulario
+    });
+    const resultado = await respuesta.json();
 
-        textoRespuesta.textContent =
-            "Gracias por comunicarte con SPYSH. " +
-            "Te responderemos a la brevedad.";
+    buttonContacto.disabled = false;
+    buttonContacto.textContent = "Enviar";
 
-        respuestaFormulario.classList.add("visible");
-
-        buttonContacto.removeAttribute("disabled");
-        buttonContacto.textContent = "Enviar";
-
-        console.log("Mensaje de respuesta mostrado.");
-    }, 2000);
+    console.log(resultado);
 });
